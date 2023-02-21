@@ -7,8 +7,8 @@ use App\Models\Ingredient;
 
 class IngredientController extends Controller
 {
-    public function index(Ingredient $ingredient)
+    public function cook(Ingredient $ingredient)
     {
-        return $ingredient->get();
+        return view('muscle/detail')->with(['ingredients' => $ingredient->recipe()]);
     }
 }
