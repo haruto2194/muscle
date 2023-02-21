@@ -9,6 +9,12 @@ class Recipe extends Model
 {
     use HasFactory;
     
+    public function getPaginateByLimit(int $limit_count = 3)
+    {
+        return $this->orderby('updated_at','DESC')->paginate($limit_count);
+    }
+    
+    
     public function ingredients()
     {
         return $this->hasMany(Ingredient::class);
