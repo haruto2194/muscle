@@ -16,5 +16,7 @@ use App\Http\Controllers\IngredientController;
 */
 
 Route::get('/',[RecipeController::class, 'index']);
+Route::get('/recipes/create',[RecipeController::class, 'create']);
 Route::get('/recipes/{recipe}',[RecipeController::class, 'detail']);
-// Route::get('/recipes/{recipe}',[IngredientController::class, 'cook']);
+Route::post('/recipes',[RecipeController::class, 'store']);
+

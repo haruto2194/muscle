@@ -23,5 +23,13 @@
                 </div>
             @endforeach
         </div>
+        <div class='sidebar'>
+            <a href="/"><h3 class='home'>ホーム</h3></a>
+            <h3 class='search'>検索</h3>
+            <h3 class='favorite'>お気に入り</h3>
+            <h3 class='menue'>献立</h3>
+            <h3 class='shopping_list'>買い出しリスト</h3>
+            <a href="/recipes/create"><h3 class='post'>投稿</h3></a>
+        </div>
         <div class='paginate'>{{ $recipes->links() }}</div>
 </html>
