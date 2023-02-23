@@ -15,6 +15,13 @@ class Recipe extends Model
         'process'
         ];
     
+    protected $fillable = [
+        'id',
+        'name',
+        'comment',
+        'process'
+        ];
+    
     public function getPaginateByLimit(int $limit_count = 3)
     {
         return $this->orderby('updated_at','DESC')->paginate($limit_count);

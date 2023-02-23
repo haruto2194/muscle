@@ -2,6 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
+
         
         <title>Recipe</title>
 
@@ -13,10 +14,12 @@
    
     <body class="antialiased">
         <h1>レシピ投稿</h1>
+
         <form action="/recipes" method="POST">
             @csrf
             <div class="recipe_name">
                 <h4>料理名</h4>
+
                 <input type="text" name=recipe[name] placeholder="料理名">
             </div>
             <div class="ingredient">
