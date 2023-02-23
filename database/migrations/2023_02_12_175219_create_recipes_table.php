@@ -14,7 +14,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('comment');
             $table->string('process');
-            $table->string('image_path');
+            $table->string('image_path')->nullable();
             $table->timestamps();
         });
     }

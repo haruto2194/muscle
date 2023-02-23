@@ -8,6 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Recipe extends Model
 {
     use HasFactory;
+    protected $fillable=[
+        'id',
+        'name',
+        'comment',
+        'process'
+        ];
     
     public function getPaginateByLimit(int $limit_count = 3)
     {

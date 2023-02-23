@@ -20,4 +20,16 @@ class RecipeController extends Controller
         return view('muscle/detail')->with(['recipe' => $recipe,'ingredients'=>$ingredients->get()]);
     }
     
+    public function create()
+    {
+        return view('muscle/create');
+    }
+
+    public function store(Request $request, Recipe $recipe){
+        $input_recipe=$request['recipe'];
+        $recipe->fill($input_recipe)->save();
+        return redirect('/recipes/' . $recipe->id);
+        
+        
+    }
 }
