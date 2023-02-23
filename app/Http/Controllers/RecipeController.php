@@ -26,8 +26,11 @@ class RecipeController extends Controller
     }
 
     public function store(Request $request, Recipe $recipe){
-        $input=$request['post'];
-        $recipe->fill($input)->save();
+
+        $input_recipe=$request['recipe'];
+        $recipe->fill($input_recipe)->save();
         return redirect('/recipes/' . $recipe->id);
+        
+     
     }
 }
