@@ -11,7 +11,7 @@
         
     </head>
     <body class="antialiased">
-        <h1>home</h1>
+        <h1>Home</h1>
         <div class='recipes'>
             @foreach($recipes as $recipe)
                 <div class='recipe'>
