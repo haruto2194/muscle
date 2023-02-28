@@ -15,12 +15,7 @@ class Recipe extends Model
         'process'
         ];
     
-    protected $fillable = [
-        'id',
-        'name',
-        'comment',
-        'process'
-        ];
+
     
     public function getPaginateByLimit(int $limit_count = 3)
     {
